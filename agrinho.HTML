@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agro Forte: Produzir Hoje, Preservar o Amanha</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">🌱 Agro Forte</div>
+
+<ul class="menu">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#tema">Tema</a></li>
+<li><a href="#praticas">Praticas</a></li>
+<li><a href="#quiz">Quiz</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+</nav>
+</header>
+
+<section class="banner" id="inicio">
+<div>
+<h1>Agro Forte: Produzir Hoje, Preservar o Amanha</h1>
+<p>Equilibrio entre producao agricola e preservacao ambiental.</p>
+<a href="#tema" class="btn">Saiba Mais</a>
+</div>
+</section>
+
+<section id="tema">
+<h2>Tema do Projeto</h2>
+<p>
+A agricultura sustentavel busca unir produtividade agricola,
+preservacao ambiental e desenvolvimento economico.
+</p>
+</section>
+
+<section>
+<h2>Problema a Ser Trabalhado</h2>
+<div class="caixa-problema">
+Como aumentar a producao agricola sem causar danos ao meio ambiente?
+</div>
+</section>
+
+<section>
+<h2>Publico-Alvo</h2>
+
+<div class="grid-publico">
+<div class="card-publico">Estudantes</div>
+<div class="card-publico">Jovens</div>
+<div class="card-publico">Agricultores</div>
+<div class="card-publico">Comunidade em Geral</div>
+</div>
+</section>
+
+<section id="praticas">
+<h2>Praticas Sustentaveis</h2>
+
+<div class="grid-praticas">
+<div class="card-pratica">Plantio Direto</div>
+<div class="card-pratica">Rotacao de Culturas</div>
+<div class="card-pratica">Preservacao das Nascentes</div>
+<div class="card-pratica">Uso Consciente da Agua</div>
+<div class="card-pratica">Energia Renovavel</div>
+<div class="card-pratica">Agricultura de Precisao</div>
+</div>
+</section>
+
+<section>
+<h2>Galeria</h2>
+
+<div class="galeria-grid">
+<img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800" alt="Agricultura">
+<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800" alt="Plantacao">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800" alt="Natureza">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Campo">
+</div>
+</section>
+
+<section id="quiz">
+<div class="quiz-box">
+<h2>Quiz Sustentavel</h2>
+
+<p id="pergunta"></p>
+
+<div id="respostas"></div>
+
+<p id="resultado"></p>
+</div>
+</section>
+
+<section id="contato">
+<h2>Contato</h2>
+
+<form class="formulario">
+<input type="text" placeholder="Seu Nome">
+<input type="email" placeholder="Seu Email">
+<textarea rows="5" placeholder="Sua mensagem"></textarea>
+<button type="submit">Enviar</button>
+</form>
+</section>
+
+<a href="#inicio" class="topo">↑</a>
+
+<footer>
+Projeto Agrinho 2026 - Agro Forte: Produzir Hoje, Preservar o Amanha
+</footer>
+
+<script>
+document.querySelector('.menu-toggle').onclick = () => {
+document.querySelector('.menu').classList.toggle('active');
+};
+
+const pergunta = document.getElementById('pergunta');
+const respostas = document.getElementById('respostas');
+const resultado = document.getElementById('resultado');
+
+const quiz = {
+p: 'Qual pratica ajuda a reduzir a erosao do solo?',
+r: ['Plantio Direto', 'Queimada', 'Desmatamento'],
+c: 0
+};
+
+pergunta.textContent = quiz.p;
+
+quiz.r.forEach((txt, i) => {
+let b = document.createElement('button');
+b.textContent = txt;
+
+b.onclick = () => {
+resultado.textContent =
+i === quiz.c ? 'Correto!' : 'Resposta incorreta.';
+};
+
+respostas.appendChild(b);
+});
+</script>
+
+</body>
+</html>
